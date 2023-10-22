@@ -1,7 +1,7 @@
 .Nav{
     height:10vh;
     width:98.8vw;
-    background-color: cyan;
+    background-color: rgb(136, 184, 184);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -20,18 +20,27 @@
     width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 
 }
 .inputLabel{
-    height:50%;
+    height:40%;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bolder;
+    color: white;
+}
+.inputWrap{
+  height: 50%;
+  /* width: ; */
+  width: 100%;
 }
 .sInput {
-    height: 40%;
-    width: 100%;
+    height:100%;
+    width: 80%;
+    border-radius: 2rem;
+    border: 0px;
+    outline: none;
   }
   
   .sInput::placeholder {
@@ -39,4 +48,33 @@
     margin-left: 70px;
     color: darkslategray;
   }
+  .profile{
+    height:100%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .profileBtn{
+    height:30px;
+    width: 100px;
+    background-image: linear-gradient(to right, green,rgb(27, 208, 27));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    outline: none;
+
+  }
+  .profileBtn:hover{
+    background-image: linear-gradient(to right, rgb(17, 223, 17),rgb(9, 237, 9));
+  }
+  #pBtn{
+    margin-left: 10px;
+  }
+  /* .searchBtn{
+
+  } */
   

@@ -1,28 +1,21 @@
-.Home{
-    height:100vh;
-    width: 98.9vw;
-    background-color: green;
-}
-
-
-.Home {
+.trending{
     margin-top: 5vh;
-    height: 200vh;
+    height:100vh;
     width: 98.8vw;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-  
-  .Home ul {
+   
+}
+.resipepage{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-  }
-  
-  .Home li {
-    height: 70%;
+}
+.resipe{
+    height:70%;
     width: 20%;
     border: 1px solid black;
     display: flex;
@@ -31,20 +24,18 @@
     justify-content: center;
     cursor: pointer;
     box-shadow: 5px 5px 10px 10px rgba(158, 152, 152, 0.5);
-  }
-  
-  .Home img {
-    height: 50%;
+}
+.mealImg{
+    height:50%;
     width: 80%;
-  }
-  
-  .Home h2 {
+}
+.heading{
     font-size: 3rem;
     font-weight: bold;
     margin-left: -60vw;
-  }
-  
-  .Home h1 {
+    /* font-family: cursive; */
+}
+.mealName{
     overflow: hidden;
-  }
-  
+    
+}
