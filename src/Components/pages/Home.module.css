@@ -6,8 +6,8 @@
 
 
 .Home {
-    margin-top: 5vh;
-    height: 200vh;
+    /* margin-top: 5vh; */
+    height: 120vh;
     width: 98.8vw;
     background-color: whitesmoke;
     display: flex;
@@ -16,13 +16,14 @@
   }
   
   .Home ul {
+    height:90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
   
   .Home li {
-    height: 70%;
+    height: 45%;
     width: 20%;
     border: 1px solid black;
     display: flex;
@@ -48,3 +49,28 @@
     overflow: hidden;
   }
   
+  .btnDiv{
+    height:10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btns{
+    height:30px;
+    width: 100px;
+    background-image: linear-gradient(to right, green,rgb(27, 208, 27));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+  }
+  .btns:hover{
+    background-image: linear-gradient(to right, rgb(20, 213, 20),rgb(4, 247, 4));
+  }
+ 

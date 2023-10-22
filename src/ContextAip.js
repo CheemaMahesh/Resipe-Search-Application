@@ -10,7 +10,7 @@ function useValue(){
 
 
  function ContextApi({children}){
-    const [seaerch,setSearch]=useState("a")
+    const [seaerch,setSearch]=useState("chicken")
     const [recipes,setResipes]=useState("");
     const [trending,setTrending]=useState("");
     const [meat,setMeat]=useState([]);
@@ -19,6 +19,7 @@ function useValue(){
     //to handle the searched results
     const handleSearch=(ss)=>{
         setSearch(ss);
+        console.log(ss);
     }
 
     //Handling the Trending Resipes
@@ -52,7 +53,7 @@ function useValue(){
          setResipes(json);
 
         })
-    },[])
+    },[seaerch])
 
 
     //6389122dde47435896fae926cf3a1f28

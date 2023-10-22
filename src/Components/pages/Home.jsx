@@ -5,7 +5,7 @@ import styles from "./Home.module.css";
 export default function Home() {
   const { recipes } = useValue();
 
-  const itemPerPage = 10;
+  const itemPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const sIndex = (currentPage - 1) * itemPerPage;
   const eIndex = itemPerPage + sIndex;
@@ -31,11 +31,13 @@ export default function Home() {
           ))
         )}
       </ul>
-      <div>
-        <button onClick={() => handlePages(currentPage - 1)} disabled={currentPage === 1}>
+      <div className={styles.btnDiv}>
+        <button onClick={() => handlePages(currentPage - 1)} disabled={currentPage === 1} className={styles.btns}>
           Prev
         </button>
-        <button onClick={() => handlePages(currentPage + 1)} disabled={currentPage === totalPages}>
+        <span><h1>{currentPage}</h1></span>
+
+        <button onClick={() => handlePages(currentPage + 1)} disabled={currentPage === totalPages} className={styles.btns}>
           Next
         </button>
       </div>

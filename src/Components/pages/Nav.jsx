@@ -9,8 +9,7 @@ export default function Nav(){
         const [search,setSearch]=useState("");
 
         const handleSearchs=(e)=>{
-                e.preventDefault();
-                handleSearch(search);
+                handleSearch(e);
         }
 
     return(
@@ -18,10 +17,10 @@ export default function Nav(){
                 <div className={styles.title}>
                         Foody...
                 </div>
-                <form className={styles.searchBar} onSubmit={handleSearchs}>
+                <form className={styles.searchBar} >
                         <div className={styles.inputLabel}>Find Recipes Here</div>
                         <div className={styles.inputWrap}>                       
-                        <input placeholder="chicken" className={styles.sInput} onChange={(e)=>setSearch(e.target.value)}/> <button className={styles.searchBtn}>Search</button>
+                        <input placeholder="chicken" className={styles.sInput} onChange={(e)=>handleSearchs(e.target.value)} /> 
                         </div>
                 </form>
                 <div className={styles.profile}>
