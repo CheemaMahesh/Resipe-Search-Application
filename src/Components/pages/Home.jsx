@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useValue } from "../../ContextAip";
 // import styles from "./styling/Home.module.css";
 import styles from "../styling/Home.module.css"
+import { Link } from "react-router-dom";
 
 
 
@@ -27,15 +28,13 @@ export default function Home() {
           <p>No recipes found.</p>
         ) : (
           res.map((recipe, i) => (
-            
-            <li key={i} onClick={()=>handlePageName(recipe.strMeal,recipe.idMeal)}>
+            <Link to="/Recipe" className={styles.Link}>
+            <li key={i} onClick={()=>handlePageName(recipe.strMeal,recipe.idMeal)} to="/Recipe">
 
               <h1>{recipe.strMeal}</h1>
               <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-              {/* <FontAwesomeIcon icon={faHeart} className={styles.fav}/> */}
-
             </li>
-            
+            </Link>
             
           ))
         )}

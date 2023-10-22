@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styling/Nav.module.css"
 import { useValue } from "../../ContextAip";
 import { useState } from "react";
+import { Link,Outlet } from "react-router-dom";
 
 
 export default function Nav(){
@@ -13,6 +14,7 @@ export default function Nav(){
         }
 
     return(
+        <>
         <div className={styles.Nav}>
                 <div className={styles.title}>
                         Foody...
@@ -28,10 +30,12 @@ export default function Nav(){
                                                         Profile
                         </button>
                         <button className={styles.profileBtn} id={styles.pBtn}>
-                                                        Favotires
+                                                       <Link to="/Favorites"> Favotires</Link>
                         </button>
 
                 </div>
         </div>
+        <Outlet/>
+        </>
     )
 }

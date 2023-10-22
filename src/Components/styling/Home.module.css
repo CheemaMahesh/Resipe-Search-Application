@@ -20,18 +20,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    list-style-type: none;
   }
   
-  .Home li {
+  .Link{
     height: 45%;
     width: 20%;
     border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+   text-decoration: none;
     box-shadow: 5px 5px 10px 10px rgba(158, 152, 152, 0.5);
+    color: black;
+  }
+  .Home li {
+   height:100%;
+   width: 100%;
+   text-decoration: none;
+   
   }
   
   .Home img {
