@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Nav.module.css"
+import styles from "../styling/Nav.module.css"
 import { useValue } from "../../ContextAip";
 import { useState } from "react";
 
@@ -20,7 +20,7 @@ export default function Nav(){
                 <form className={styles.searchBar} >
                         <div className={styles.inputLabel}>Find Recipes Here</div>
                         <div className={styles.inputWrap}>                       
-                        <input placeholder="chicken" className={styles.sInput} onChange={(e)=>handleSearchs(e.target.value)} /> 
+                        <input placeholder="Chicken" className={styles.sInput} onChange={(e)=>handleSearchs(e.target.value)} /> 
                         </div>
                 </form>
                 <div className={styles.profile}>

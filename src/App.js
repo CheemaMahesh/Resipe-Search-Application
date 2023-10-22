@@ -4,6 +4,7 @@ import Home from './Components/pages/Home';
 import Nav from './Components/pages/Nav';
 import Trending from './Components/pages/Trending';
 import Meat from './Components/pages/Meat';
+import Recipe from './Components/pages/Recipe';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <Home/>
       <Trending/>
       <Meat/>
+      <hr/>
+      <Recipe/>
      </ContextApi>
     </div>
   );

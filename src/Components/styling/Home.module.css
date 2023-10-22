@@ -7,7 +7,7 @@
 
 .Home {
     /* margin-top: 5vh; */
-    height: 120vh;
+    height: 140vh;
     width: 98.8vw;
     background-color: whitesmoke;
     display: flex;
@@ -16,7 +16,7 @@
   }
   
   .Home ul {
-    height:90%;
+    height:70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -50,7 +50,7 @@
   }
   
   .btnDiv{
-    height:10%;
+    height:5%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -69,8 +69,16 @@
     border: 0px;
     outline: none;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3rem;
   }
   .btns:hover{
     background-image: linear-gradient(to right, rgb(20, 213, 20),rgb(4, 247, 4));
   }
- 
+ .title{
+    height:5%;
+ }
+ .fav{
+  height:10%;
+  margin-left: -10vw;
+ }

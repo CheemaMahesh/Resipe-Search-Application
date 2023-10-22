@@ -14,6 +14,14 @@ function useValue(){
     const [recipes,setResipes]=useState("");
     const [trending,setTrending]=useState("");
     const [meat,setMeat]=useState([]);
+    const [name,setName]=useState("Egg Plant Curry");
+    const [id,setId]=useState(2);
+
+    //handle Page-Name and Id
+    const handlePageName=(n,i)=>{
+            setName(n);
+            setId(i)
+    }
 
 
     //to handle the searched results
@@ -82,7 +90,10 @@ function useValue(){
             recipes,
             handleSearch,
             trending,
-            meat
+            meat,
+            name,
+            id,
+            handlePageName,
             
             }}>
             {children}

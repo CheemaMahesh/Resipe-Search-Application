@@ -1,6 +1,6 @@
 import React from "react";
 import { useValue } from "../../ContextAip";
-import styles from "./Trending.module.css";
+import styles from "../styling/Trending.module.css";
 
 
 export default function Trending(){

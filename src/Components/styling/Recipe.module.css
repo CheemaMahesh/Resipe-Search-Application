@@ -1,0 +1,15 @@
+.recipe{
+    height: 140vh;
+    width: 98.8vw;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: green;
+}
+
+.stars{
+    font-size: 2rem;
+    color: red;
+}
+

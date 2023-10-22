@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { useValue } from "../../ContextAip";
-import styles from "./Home.module.css";
+// import styles from "./styling/Home.module.css";
+import styles from "../styling/Home.module.css"
+
+
 
 export default function Home() {
-  const { recipes } = useValue();
+  const { recipes,handlePageName } = useValue();
 
   const itemPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,16 +21,22 @@ export default function Home() {
 
   return (
     <div className={styles.Home}>
-      <h2>Your Recipes</h2>
+      <h2 className={styles.title}>Your Recipes</h2>
       <ul>
         {!recipes || !recipes.meals || !Array.isArray(recipes.meals) ? (
           <p>No recipes found.</p>
         ) : (
           res.map((recipe, i) => (
-            <li key={i}>
+            
+            <li key={i} onClick={()=>handlePageName(recipe.strMeal,recipe.idMeal)}>
+
               <h1>{recipe.strMeal}</h1>
               <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+              {/* <FontAwesomeIcon icon={faHeart} className={styles.fav}/> */}
+
             </li>
+            
+            
           ))
         )}
       </ul>

@@ -1,10 +1,11 @@
 .Nav{
-    height:10vh;
+    height:12vh;
     width:98.8vw;
     background-color: rgb(136, 184, 184);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 10px 10px 10px 10px rgba(rgb(207, 196, 196), rgb(211, 217, 211), rgb(168, 168, 189), alpha);
 }
 .Nav::-webkit-scrollbar{
     display: none;
@@ -14,6 +15,7 @@
     color: black;
     font-weight: bold;
     width: 30%;
+    /* height:5%; */
 }
 .searchBar{
     height:100%;
@@ -44,9 +46,10 @@
   }
   
   .sInput::placeholder {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin-left: 70px;
     color: darkslategray;
+    
   }
   .profile{
     height:100%;
