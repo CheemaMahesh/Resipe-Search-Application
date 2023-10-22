@@ -10,11 +10,11 @@ function useValue(){
 
 
  function ContextApi({children}){
-    const [seaerch,setSearch]=useState("egg")
+    const [seaerch,setSearch]=useState("chicken")
     const [recipes,setResipes]=useState("");
 
     useEffect(()=>{
-            fetch(`https://themealdb.com/api/json/v1/1/search.php?s=${seaerch}`)
+            fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${seaerch}&apiKey=43303235e69c4007a1862ef2a30b517a`)
             .then(res=>res.json())
             .then((json)=>{
                 console.log(json)

@@ -1,0 +1,42 @@
+.Nav{
+    height:10vh;
+    width:98.8vw;
+    background-color: cyan;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Nav::-webkit-scrollbar{
+    display: none;
+}
+.title{
+    font-size: 3rem;
+    color: black;
+    font-weight: bold;
+    width: 30%;
+}
+.searchBar{
+    height:100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.inputLabel{
+    height:50%;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.sInput {
+    height: 40%;
+    width: 100%;
+  }
+  
+  .sInput::placeholder {
+    font-size: 1rem;
+    margin-left: 70px;
+    color: darkslategray;
+  }
+  
