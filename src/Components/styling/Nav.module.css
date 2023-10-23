@@ -103,13 +103,14 @@
   /* Responsive Styling for Mobile View (max-width: 600px) */
 @media screen and (max-width: 600px) {
   .Nav {
-    height: auto; /* Adjusted height for responsiveness */
+    height: 20vh; /* Adjusted height for responsiveness */
     flex-direction: column; /* Stack items vertically on mobile */
   }
 
   .title {
-    font-size: 2rem; /* Adjusted font size for mobile view */
+    font-size: 1.5rem; /* Adjusted font size for mobile view */
     width: auto; /* Adjusted width for mobile view */
+    color: rgb(38, 30, 30);
   }
 
   .fff {
@@ -118,6 +119,9 @@
 
   .searchBar {
     width: 100%; /* Full width for mobile view */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .inputWrap {
