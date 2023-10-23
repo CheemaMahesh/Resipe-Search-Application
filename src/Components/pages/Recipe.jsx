@@ -66,8 +66,7 @@ export default function Recipe() {
 
   return (
     <div className={styles.recipe}>
-      <div className={styles.title}>
-      </div>
+      
       <div className={styles.imageDiv}>
         {!recipeD || !recipeD.meals || !Array.isArray(recipeD.meals) ? (
           <p>No recipes found.</p>
@@ -118,14 +117,48 @@ export default function Recipe() {
                 <div className={styles.header}> <span>&#x1F552; </span><span>&#127859; </span><span> &#127869; </span></div>
                 <div className={styles.footer}><span>15 mins</span><span>Easy</span><span>Serv 4</span></div>
           </div>
+          <div className={styles.buttonss}>
+                  <div className={styles.additionalD}>
+                          <div className={styles.adHeader}>
+                            <span>Category</span> <span>Area</span><span>Tags</span>
+                          </div>
+                          <div className={styles.adFooter}>
+                            <span>{recipe.strCategory}</span><span>{recipe.strArea}</span><span>{recipe.strTags}</span>
+                          </div>
+
+                  </div>
+                  <div className={styles.favs}> 
+                        <div className={styles.favorites}>Add To Fav</div>
+                        <div className={styles.video}><a href={recipe.strYoutube} target="_blank" rel="noopener noreferrer" className={styles.Youtube}>YouTube</a></div>
+                  </div>
+                  <div></div>
+          </div>
                       </div>
 
         {/*------------------ ---------------------------------------------------------------------------------------------------------------------------- */}
                       <div className={styles.details}>
                          <div className={styles.Name}>{name}</div>
                           <div className={styles.howToCook}><span className={styles.htcs}>How to cook:-</span>{recipe.strInstructions}</div>
+                          <div className={styles.ingr}>
+
+                          <h3>Ingredients:</h3>
+              <ul className={styles.ingredientsList}>
+                {Array.from({ length: 20 }, (_, i) => i + 1).map((index) => {
+                  const ingredient = recipe[`strIngredient${index}`];
+                  const measurement = recipe[`strMeasure${index}`];
+                  if (ingredient && measurement) {
+                    return (
+                      <li key={index} className={styles.ingredientItem}>
+                        {ingredient}: {measurement}
+                      </li>
+                    );
+                  }
+                  return null;
+                })}
+              </ul>
+                          </div>
+
                         </div>
-                        {/* <div className={styles.howToCood}></div> */}
             </div>
           ))
         )}

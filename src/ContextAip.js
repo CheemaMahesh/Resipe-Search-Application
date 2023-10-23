@@ -16,7 +16,13 @@ function useValue(){
     const [meat,setMeat]=useState([]);
     const [name,setName]=useState("Egg Plant Curry");
     const [id,setId]=useState(2);
-    const [recipeD,setResipeD]=useState("")
+    const [recipeD,setResipeD]=useState("");
+    const [favorites,setFavorites]=useState([]);
+
+    //handle favorites
+    const handleFavorites=()=>{
+        
+    }
 
     //handle Page-Name and Id
     const handlePageName=(n,i)=>{
