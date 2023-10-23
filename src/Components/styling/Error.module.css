@@ -1,0 +1,38 @@
+/* Error.module.css */
+.errorContainer {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .errorMessage {
+    color: #ff5722;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .errorDescription {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .homeLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .homeLink:hover {
+    background-color: #0056b3;
+  }
+  

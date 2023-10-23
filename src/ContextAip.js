@@ -16,11 +16,18 @@ function useValue(){
     const [meat,setMeat]=useState([]);
     const [name,setName]=useState("Egg Plant Curry");
     const [id,setId]=useState(2);
+    const [recipeD,setResipeD]=useState("")
 
     //handle Page-Name and Id
     const handlePageName=(n,i)=>{
             setName(n);
             setId(i)
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${n}`)
+        .then(res=>res.json())
+        .then((json)=>{
+            setResipeD(json);
+            // console.log(json,"benchod")
+        })
     }
 
 
@@ -94,6 +101,7 @@ function useValue(){
             name,
             id,
             handlePageName,
+            recipeD
             
             }}>
             {children}

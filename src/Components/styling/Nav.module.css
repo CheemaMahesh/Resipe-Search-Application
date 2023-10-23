@@ -6,16 +6,21 @@
   justify-content: space-around;
   align-items: center;
   box-shadow: 10px 10px 10px 10px rgba(rgb(207, 196, 196), rgb(211, 217, 211), rgb(168, 168, 189), alpha);
+  border-bottom: 5px solid black;
 }
 .Nav::-webkit-scrollbar{
     display: none;
 }
 .title{
-    font-size: 3rem;
-    color: black;
+    font-size: 4.5rem;
+    color: whitesmoke;
     font-weight: bold;
     width: 30%;
     /* height:5%; */
+    /* color:linen */
+}
+.fff{
+  color: yellow;
 }
 .searchBar{
     height:100%;
@@ -49,6 +54,7 @@
     font-size: 1.4rem;
     margin-left: 70px;
     color: darkslategray;
+    font-weight: bold;
     
   }
   .profile{
@@ -69,6 +75,8 @@
     justify-content: center;
     border: 0px;
     outline: none;
+    text-decoration: none;
+
 
   }
   .profileBtn:hover{
@@ -77,7 +85,10 @@
   #pBtn{
     margin-left: 10px;
   }
-  /* .searchBtn{
+  .links{
+    text-decoration: none;
+    color: black;
 
-  } */
+  }
   
+ 

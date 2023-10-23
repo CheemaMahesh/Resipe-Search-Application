@@ -17,12 +17,16 @@ export default function Nav(){
         <>
         <div className={styles.Nav}>
                 <div className={styles.title}>
-                        Foody...
+                       Foody......<sapn className={styles.fff}>!</sapn>
                 </div>
                 <form className={styles.searchBar} >
                         <div className={styles.inputLabel}>Find Recipes Here</div>
                         <div className={styles.inputWrap}>                       
-                        <input placeholder="Chicken" className={styles.sInput} onChange={(e)=>handleSearchs(e.target.value)} /> 
+                        <input
+  placeholder="🔍 Search"
+  className={styles.sInput}
+  onChange={(e) => handleSearchs(e.target.value)}
+/>
                         </div>
                 </form>
                 <div className={styles.profile}>
@@ -30,11 +34,13 @@ export default function Nav(){
                                                         Profile
                         </button>
                         <button className={styles.profileBtn} id={styles.pBtn}>
-                                                       <Link to="/Favorites"> Favotires</Link>
+                                                       <Link to="/Favorites" className={styles.links}> Favotires</Link>
                         </button>
 
                 </div>
         </div>
+        <div className={styles.hr}></div>
+
         <Outlet/>
         </>
     )
