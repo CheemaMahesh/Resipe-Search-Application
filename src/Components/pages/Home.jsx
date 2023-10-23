@@ -28,7 +28,7 @@ export default function Home() {
           <p>No recipes found.</p>
         ) : (
           res.map((recipe, i) => (
-            <Link to="/Recipe" className={styles.Link}>
+            <Link to="/Recipe" className={styles.Link} key={i}>
             <li key={i} onClick={()=>handlePageName(recipe.strMeal,recipe.idMeal)} to="/Recipe">
 
               <h1>{recipe.strMeal}</h1>

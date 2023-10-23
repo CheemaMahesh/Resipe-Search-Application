@@ -1,66 +1,9 @@
-// import React, { useState, useEffect } from "react";
-// import styles from "../styling/Recipe.module.css";
-// import { useValue } from "../../ContextAip";
-
-// export default function Recipe() {
-//   const { name, recipeD } = useValue();
-
-//   useEffect(() => {
-//     // You can remove this useEffect if not needed
-//   }, []);
-
-//   return (
-//     <div className={styles.recipe}>
-//       <div className={styles.title}>
-//         <div>{name}</div>
-//       </div>
-//       <div className={styles.imageDiv}>
-//         {!recipeD || !recipeD.meals || !Array.isArray(recipeD.meals) ? (
-//           <p>No recipes found.</p>
-//         ) : (
-//           recipeD.meals.map((recipe, i) => (
-//             <div key={recipe.idMeal} className={styles.recipeItem}>
-//               <img src={recipe.strMealThumb} alt={recipe.strMeal} className={styles.recipeImage} />
-//               <p>{recipe.strInstructions}</p>
-//               <p>Category: {recipe.strCategory}</p>
-//               <p>Area: {recipe.strArea}</p>
-//               <p>Tags: {recipe.strTags}</p>
-//               <a href={recipe.strYoutube} target="_blank" rel="noopener noreferrer">
-//                 Watch on YouTube
-//               </a>
-//               <p>Ingredients:</p>
-//               <ul className={styles.ingredientsList}>
-//                 {Array.from({ length: 20 }, (_, i) => i + 1).map((index) => {
-//                   const ingredient = recipe[`strIngredient${index}`];
-//                   const measurement = recipe[`strMeasure${index}`];
-//                   if (ingredient && measurement) {
-//                     return (
-//                       <li key={index} className={styles.ingredientItem}>
-//                         {ingredient}: {measurement}
-//                       </li>
-//                     );
-//                   }
-//                   return null;
-//                 })}
-//               </ul>
-//               <p>
-//                 Source: <a href={recipe.strSource} target="_blank" rel="noopener noreferrer">{recipe.strSource}</a>
-//               </p>
-//             </div>
-//           ))
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
-
 import React, { useState, useEffect } from "react";
 import styles from "../styling/Recipe.module.css";
 import { useValue } from "../../ContextAip";
 
 export default function Recipe() {
-  const { name, recipeD,id } = useValue();
+  const { name, recipeD,id ,handleFavorites} = useValue();
 
 
 
@@ -73,32 +16,7 @@ export default function Recipe() {
         ) : (
           recipeD.meals.map((recipe, i) => (
             <div key={recipe.idMeal} className={styles.recipeItem}>
-              {/* <img src={recipe.strMealThumb} alt={recipe.strMeal} className={styles.recipeImage} />
-              <p>{recipe.strInstructions}</p>
-              <p>Category: {recipe.strCategory}</p>
-              <p>Area: {recipe.strArea}</p>
-              <p>Tags: {recipe.strTags}</p>
-              <a href={recipe.strYoutube} target="_blank" rel="noopener noreferrer">
-                Watch on YouTube
-              </a>
-              <p>Ingredients:</p>
-              <ul className={styles.ingredientsList}>
-                {Array.from({ length: 20 }, (_, i) => i + 1).map((index) => {
-                  const ingredient = recipe[`strIngredient${index}`];
-                  const measurement = recipe[`strMeasure${index}`];
-                  if (ingredient && measurement) {
-                    return (
-                      <li key={index} className={styles.ingredientItem}>
-                        {ingredient}: {measurement}
-                      </li>
-                    );
-                  }
-                  return null;
-                })}
-              </ul>
-              <p>
-                Source: <a href={recipe.strSource} target="_blank" rel="noopener noreferrer">{recipe.strSource}</a>
-              </p> */}
+              
 
 
                 {/* =====================Img-==================================== */}
@@ -128,7 +46,7 @@ export default function Recipe() {
 
                   </div>
                   <div className={styles.favs}> 
-                        <div className={styles.favorites}>Add To Fav</div>
+                        <div className={styles.favorites} onClick={()=>handleFavorites(recipe.strMeal)}>Add To Fav</div>
                         <div className={styles.video}><a href={recipe.strYoutube} target="_blank" rel="noopener noreferrer" className={styles.Youtube}>YouTube</a></div>
                   </div>
                   <div></div>

@@ -31,7 +31,7 @@ export default function Nav(){
                 </form>
                 <div className={styles.profile}>
                         <button className={styles.profileBtn}>
-                                                        Profile
+                                                       <Link to="/" className={styles.links}> Home</Link>
                         </button>
                         <button className={styles.profileBtn} id={styles.pBtn}>
                                                        <Link to="/Favorites" className={styles.links}> Favotires</Link>

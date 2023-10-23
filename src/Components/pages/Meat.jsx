@@ -13,9 +13,8 @@ export default function Meat(){
             <div className={styles.heading}>Recipes with Meat</div>
 
             <div className={styles.resipepage}>
-            {/* {!meat || !meat.meals || !Array.isArray(meat.meals)?<p>No recipes found.</p>: */}
-             {meat.map((d)=>{
-                return( <Link className={styles.resipe} to="/Recipe" onClick={()=>handlePageName(d.strMeal,d.idMeal)}>
+             {meat.map((d,i)=>{
+                return( <Link className={styles.resipe} to="/Recipe" onClick={()=>handlePageName(d.strMeal,d.idMeal)} key={i}>
                  <img src={d.strMealThumb}  className={styles.mealImg}/>
                  <h1 className={styles.mealName}>{d.strMeal}</h1>
                 </Link>)

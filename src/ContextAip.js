@@ -18,10 +18,17 @@ function useValue(){
     const [id,setId]=useState(2);
     const [recipeD,setResipeD]=useState("");
     const [favorites,setFavorites]=useState([]);
+    const [favItems,setFavitems]=useState([])
 
     //handle favorites
-    const handleFavorites=()=>{
-        
+    const handleFavorites=(name)=>{
+        setFavorites([...favorites,name]);
+        console.log("Favrits:- ",favorites)
+    }
+
+    //Handle Fav Render
+    const handleFavRender=()=>{
+        //TODO compare the favorites with the given api name and add to favItems along with full data if they matches
     }
 
     //handle Page-Name and Id
@@ -107,7 +114,8 @@ function useValue(){
             name,
             id,
             handlePageName,
-            recipeD
+            recipeD,
+            handleFavorites
             
             }}>
             {children}
