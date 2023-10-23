@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const { recipes,handlePageName } = useValue();
 
+
+  //Pagination
   const itemPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const sIndex = (currentPage - 1) * itemPerPage;
@@ -22,11 +24,12 @@ export default function Home() {
 
   return (
     <div className={styles.Home}>
-      <h2 className={styles.title}>Your Recipes</h2>
+      <h2 className={styles.title}>&emsp;&emsp;&emsp;&emsp;Your Recipes</h2>
       <ul>
         {!recipes || !recipes.meals || !Array.isArray(recipes.meals) ? (
           <p>No recipes found.</p>
         ) : (
+          // ===================================Home page Recipes
           res.map((recipe, i) => (
             <Link to="/Recipe" className={styles.Link} key={i}>
             <li key={i} onClick={()=>handlePageName(recipe.strMeal,recipe.idMeal)} to="/Recipe">
@@ -39,6 +42,8 @@ export default function Home() {
           ))
         )}
       </ul>
+
+      {/*==================================== Page buttons=================================== */}
       <div className={styles.btnDiv}>
         <button onClick={() => handlePages(currentPage - 1)} disabled={currentPage === 1} className={styles.btns}>
           Prev

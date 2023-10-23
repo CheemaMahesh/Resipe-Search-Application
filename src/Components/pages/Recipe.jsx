@@ -2,6 +2,8 @@ import React from "react";
 import styles from "../styling/Recipe.module.css";
 import { useValue } from "../../ContextAip";
 
+
+//Redipe details page component
 export default function Recipe() {
   const { name, recipeD,id ,handleFavorites} = useValue();
 

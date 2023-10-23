@@ -3,6 +3,9 @@ import { useValue } from "../../ContextAip";
 import styles from "../styling/Favorite.module.css";
 import { Link } from "react-router-dom";
 
+
+
+//Favorite list Component
 export default function Favorite() {
   const { favItems, handlePageName } = useValue();
 
@@ -11,6 +14,7 @@ export default function Favorite() {
       <div className={styles.heading}>Favorite Recipes</div>
 
       <div className={styles.resipepage}>
+        
         {favItems.map((d, i) => {
           return (
             <Link className={styles.resipe} to="/Recipe" onClick={() => handlePageName(d.strMeal, d.idMeal)} key={i}>
