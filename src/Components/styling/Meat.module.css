@@ -41,3 +41,51 @@
     overflow: hidden;
     
 }
+
+
+/* =================== */
+
+
+
+/* Existing CSS Styles (for larger screens) */
+
+/* Responsive Styling for Mobile View (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .trending {
+      margin-top: 2vh; /* Adjusted margin-top for mobile view */
+      height: auto; /* Adjusted height for responsiveness */
+    }
+  
+    .resipepage {
+      display: flex;
+      flex-direction: column; /* Adjusted flex-direction for mobile view */
+      justify-content: space-around;
+    }
+  
+    .resipe {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 90%; /* Adjusted width for mobile view */
+      border: 1px solid black;
+      text-align: center; /* Adjusted text alignment for mobile view */
+    }
+  
+    .mealImg {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 80%; /* Adjusted width for mobile view */
+    }
+  
+    .heading {
+      font-size: 2rem; /* Adjusted font size for mobile view */
+      font-weight: bold;
+      margin-left: -50vw; /* Adjusted margin for mobile view */
+    }
+  
+    .mealName {
+      overflow: hidden;
+      font-size: 1rem; /* Adjusted font size for mobile view */
+    }
+  
+    /* Additional Styling for Mobile View (Optional) */
+    /* You can further customize the styling for mobile view if needed. */
+  }
+  

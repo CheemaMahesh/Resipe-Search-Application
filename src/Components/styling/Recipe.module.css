@@ -162,3 +162,91 @@ color: white;
 .video:hover{
     background-image: linear-gradient(to right,red,red);
 }
+
+
+
+/* ============================================ */
+/* Responsive Styling for Mobile View (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .recipe {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 100%; /* Adjusted width for mobile view */
+      background-color: whitesmoke;
+    }
+  
+    .recipeItem {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 100%; /* Adjusted width for mobile view */
+      flex-direction: column; /* Adjusted flex-direction for mobile view */
+      align-items: center;
+    }
+  
+    .imgDiv {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 80%; /* Adjusted width for mobile view */
+      margin-top: 5vh;
+    }
+  
+    .recipeImage {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 100%; /* Adjusted width for mobile view */
+    }
+  
+    .details {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 90%; /* Adjusted width for mobile view */
+      margin-top: 5vh;
+    }
+  
+    .Name {
+      font-size: 2rem; /* Adjusted font size for mobile view */
+    }
+  
+    .howToCook {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 100%;
+      overflow: scroll;
+    }
+  
+    .htcs {
+      font-size: 1.2rem; /* Adjusted font size for mobile view */
+    }
+  
+    .ingr {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 100%;
+      overflow: scroll;
+    }
+  
+    .buttonss {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 100%;
+      flex-direction: column; /* Adjusted flex-direction for mobile view */
+    }
+  
+    .additionalD {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 100%;
+    }
+  
+    .favs {
+      height: auto; /* Adjusted height for responsiveness */
+      width: 100%;
+    }
+  
+    .favorites {
+      height: 5vh;
+      width: 30%; /* Adjusted width for mobile view */
+    }
+  
+    .video {
+      height: 5vh;
+      width: 30%; /* Adjusted width for mobile view */
+      border-radius: 0.4rem;
+    }
+  
+    .video a {
+      font-size: 1rem; /* Adjusted font size for mobile view */
+    }
+  }
+  

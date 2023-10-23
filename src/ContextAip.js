@@ -20,16 +20,38 @@ function useValue(){
     const [favorites,setFavorites]=useState([]);
     const [favItems,setFavitems]=useState([])
 
-    //handle favorites
-    const handleFavorites=(name)=>{
-        setFavorites([...favorites,name]);
-        console.log("Favrits:- ",favorites)
+   // Handle favorites
+const handleFavorites = (name) => {
+    // Check if the name is already in favorites
+    if (!favorites.includes(name)) {
+      setFavorites([...favorites, name]);
+      console.log("Favorites: ", favItems);
     }
+  }
+  
 
     //Handle Fav Render
-    const handleFavRender=()=>{
-        //TODO compare the favorites with the given api name and add to favItems along with full data if they matches
+   const handleFavRender = () => {
+  const favItems = [];
+
+  favorites.forEach((favName) => {
+    const matchingRecipe = recipes.meals.find(
+      (recipe) => recipe.strMeal === favName
+    );
+
+    if (matchingRecipe) {
+      favItems.push(matchingRecipe);
     }
+  });
+
+  setFavitems(favItems);
+  console.log("Fav items ",favItems);
+};
+
+useEffect(() => {
+  handleFavRender();
+}, [favorites, recipes]);
+
 
     //handle Page-Name and Id
     const handlePageName=(n,i)=>{
@@ -115,7 +137,8 @@ function useValue(){
             id,
             handlePageName,
             recipeD,
-            handleFavorites
+            handleFavorites,
+            favItems
             
             }}>
             {children}

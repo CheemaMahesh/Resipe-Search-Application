@@ -46,7 +46,7 @@ export default function Recipe() {
 
                   </div>
                   <div className={styles.favs}> 
-                        <div className={styles.favorites} onClick={()=>handleFavorites(recipe.strMeal)}>Add To Fav</div>
+                        <div className={styles.favorites} onClick={()=>handleFavorites(recipe.strMeal)}>AddFav</div>
                         <div className={styles.video}><a href={recipe.strYoutube} target="_blank" rel="noopener noreferrer" className={styles.Youtube}>YouTube</a></div>
                   </div>
                   <div></div>

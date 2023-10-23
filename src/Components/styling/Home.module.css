@@ -89,3 +89,99 @@
   height:10%;
   margin-left: -10vw;
  }
+
+
+
+ /* ================================ */
+
+
+/* Small screens (phones) */
+@media screen and(max-width:600px){
+  .Home{
+    height:200vh;
+    width:100vw;
+  }
+  .Home ul{
+    height:85%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+  .Link{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+  
+  }
+  .Home li {
+    height:10%;
+    width: 80%;
+    
+   }
+
+  
+}
+
+/* Existing CSS Styles (for larger screens) */
+
+/* Responsive Styling for Mobile View (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .Home {
+    height: auto; /* Adjusted height for responsiveness */
+  }
+
+  .Home ul {
+    height: auto; /* Adjusted height for responsiveness */
+  }
+
+  .Link {
+    height: auto; /* Adjusted height for responsiveness */
+    width: 100%; /* Take full width on mobile */
+  }
+
+  .Home li {
+    height: auto; /* Adjusted height for responsiveness */
+    width: 100%; /* Take full width on mobile */
+  }
+
+  .Home img {
+    height: auto; /* Adjusted height for responsiveness */
+    width: 100%; /* Take full width on mobile */
+  }
+
+  .title {
+    font-size: 2rem; /* Adjusted font size for mobile view */
+    margin-left: -50vw; /* Adjusted margin for mobile view */
+  }
+
+  .btnDiv {
+    height: auto; /* Adjusted height for responsiveness */
+  }
+
+  .btns {
+    height: 30px;
+    width: 45%; /* Adjusted width for mobile view */
+    font-size: 1rem; /* Adjusted font size for mobile view */
+  }
+
+  .btns:hover {
+    font-size: 1rem; /* Adjusted font size for mobile view */
+  }
+
+  .title {
+    height: 5%;
+    font-size: 2rem; /* Adjusted font size for mobile view */
+  }
+
+  .fav {
+    height: 10%;
+    margin-left: -10vw;
+  }
+
+  /* Additional Styling for Mobile View (Optional) */
+  /* You can further customize the styling for mobile view if needed. */
+}
+

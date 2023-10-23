@@ -89,6 +89,60 @@
     text-decoration: none;
     color: black;
 
+
+
+
   }
+
+
+
+
+  /* =========================================== */
+
+
+  /* Responsive Styling for Mobile View (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .Nav {
+    height: auto; /* Adjusted height for responsiveness */
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+
+  .title {
+    font-size: 2rem; /* Adjusted font size for mobile view */
+    width: auto; /* Adjusted width for mobile view */
+  }
+
+  .fff {
+    display: none; /* Hide the yellow exclamation mark on mobile */
+  }
+
+  .searchBar {
+    width: 100%; /* Full width for mobile view */
+  }
+
+  .inputWrap {
+    width: 100%; /* Full width for mobile view */
+  }
+
+  .sInput {
+    width: 100%; /* Full width for mobile view */
+    margin-left: 0; /* Reset margin for mobile view */
+  }
+
+  .profile {
+    width: 100%; /* Full width for mobile view */
+    flex-direction: column; /* Stack buttons vertically on mobile */
+  }
+
+  .profileBtn {
+    width: 100%; /* Full width for mobile view */
+    margin: 5px 0; /* Add some vertical spacing between buttons */
+  }
+
+  #pBtn {
+    margin-left: 0; /* Reset margin-left for mobile view */
+  }
+}
+
   
  

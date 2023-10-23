@@ -1,0 +1,94 @@
+.trending{
+    margin-top: 5vh;
+    height:100vh;
+    width: 98.8vw;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+}
+.resipepage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.resipe{
+    height:70%;
+    width: 20%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px 10px rgba(158, 152, 152, 0.5);
+    text-decoration: none;
+    color: black;
+}
+.mealImg{
+    height:50%;
+    width: 80%;
+}
+.heading{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: -60vw;
+    /* font-family: cursive; */
+}
+.mealName{
+    overflow: hidden;
+    
+}
+
+
+/* =================================Responsive Styling for Mobile View (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .trending {
+      margin-top: 5vh;
+      height: auto; /* Adjusted height for responsiveness */
+      width: 100%; /* Adjusted width for mobile view */
+      background-color: whitesmoke;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  
+    .resipepage {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  
+    .resipe {
+      height: 70%;
+      width: 45%; /* Adjusted width for mobile view */
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px 10px rgba(158, 152, 152, 0.5);
+      text-decoration: none;
+      color: black;
+    }
+  
+    .mealImg {
+      height: 50%;
+      width: 80%;
+    }
+  
+    .heading {
+      font-size: 2rem; /* Adjusted font size for mobile view */
+      font-weight: bold;
+      margin-left: 0; /* Reset margin-left for mobile view */
+    }
+  
+    .mealName {
+      overflow: hidden;
+    }
+  }
+  
